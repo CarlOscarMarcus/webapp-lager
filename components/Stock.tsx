@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Text, View } from 'react-native';
 import config from "../config/config.json";
 
@@ -16,6 +16,15 @@ function StockList() {
   return (
     <View>
       {list}
+    </View>
+  );
+}
+
+export default function Stock() {
+  return (
+    <View>
+      <Text style={{color: '#333', fontSize: 24}}>Lagerförteckning</Text>
+      <StockList/>
     </View>
   );
 }
